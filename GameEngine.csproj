@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MathLibrary\**" />
+    <Compile Remove="Math\**" />
+    <EmbeddedResource Remove="MathLibrary\**" />
+    <EmbeddedResource Remove="Math\**" />
+    <None Remove="MathLibrary\**" />
+    <None Remove="Math\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="MathLibrary\MathLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\enemy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
